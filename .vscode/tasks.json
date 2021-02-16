@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "C/C++: g++.exe build _main file",
+        "command": "C:\\Programs\\MinGW64\\bin\\g++.exe",
+        "args": [
+            "-g", 
+            "${workspaceFolder}\\_main.cpp", 
+            "-o", 
+            "${workspaceFolder}\\_main.exe"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:\\Programs\\MinGW64\\bin\\g++.exe",
+        "args": [
+            "-g", 
+            "${file}", 
+            "-o", 
+            "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
